@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Roster from "./Roster";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const roster = [
+    { id: "1", firstName: "John", lastName: "Smith", location: "California" },
+    { id: "2", firstName: "April", lastName: "White", location: "Nebraska" },
+    { id: "3", firstName: "Jane", lastName: "Doe", location: "Florida" },
+  ];
+  return <Roster detailed={false} roster={roster} />;
 }
 
 export default App;
